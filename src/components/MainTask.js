@@ -1,11 +1,11 @@
 import React from 'react';
-import WriteNewTask from './inputs/text/WriteNewTask';
+import AddNewTask from './inputs/addTaskInputs/AddNewTask';
 
 export default function MainTask() {
   return (
     <div>
       <section>
-        <WriteNewTask />
+        <AddNewTask />
       </section>
       <main />
     </div>
