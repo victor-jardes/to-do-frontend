@@ -1,5 +1,4 @@
 import React from 'react';
-import AddTaskButton from './inputs/buttons/AddTaskButton';
 import WriteNewTask from './inputs/text/WriteNewTask';
 
 export default function MainTask() {
@@ -7,7 +6,6 @@ export default function MainTask() {
     <div>
       <section>
         <WriteNewTask />
-        <AddTaskButton />
       </section>
       <main />
     </div>
