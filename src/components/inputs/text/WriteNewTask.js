@@ -1,5 +1,6 @@
-export default function WriteNewTask() {
+import React from 'react';
 
+export default function WriteNewTask() {
   return (
     <label htmlFor="write-input">
       New Task:
@@ -8,8 +9,8 @@ export default function WriteNewTask() {
         name=""
         data-testid="input-write-task"
         id="write-input"
-        placeholder='write new task...'
-        />
+        placeholder="write new task..."
+      />
     </label>
-  )
+  );
 }
