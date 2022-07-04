@@ -1,13 +1,11 @@
 import React from 'react';
-import AddTaskButton from './inputs/buttons/AddTaskButton';
-import WriteNewTask from './inputs/text/WriteNewTask';
+import AddNewTask from './inputs/addTaskInputs/AddNewTask';
 
 export default function MainTask() {
   return (
     <div>
       <section>
-        <WriteNewTask />
-        <AddTaskButton />
+        <AddNewTask />
       </section>
       <main />
     </div>

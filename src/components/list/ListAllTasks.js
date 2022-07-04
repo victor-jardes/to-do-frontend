@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import getAllTasks from "../../services/tasksServices";
+import React, { useState, useEffect } from 'react';
+import getAllTasks from '../../services/tasksServices';
 
 function ListAllTasks() {
   const [allTasks, setAllTasks] = useState([]);
@@ -9,13 +9,12 @@ function ListAllTasks() {
       try {
         const request = await getAllTasks();
         setAllTasks(request);
-
       } catch (error) {
         throw new Error({
-          message: 'erro when calling service'
-        })
+          message: 'erro when calling service',
+        });
       }
-    }
+    };
     findAllTasks();
   }, []);
 
@@ -32,7 +31,7 @@ function ListAllTasks() {
         }
       </ul>
     </div>
-  )
+  );
 }
 
 export default ListAllTasks;

@@ -1,12 +1,20 @@
 import axios from 'axios';
 
-async function getAllTasks() {
+export async function getAllTasks() {
   try {
-    const { data } =  await axios.get('http://localhost:3001/tasks');
+    const { data } = await axios.get('http://localhost:3001/tasks');
     return data;
   } catch (error) {
-    throw new Error({ message: 'error in method GET' })
+    throw new Error({ message: 'error in method GET' });
   }
 }
 
-export default getAllTasks;
+export async function insetTask(work) {
+  try {
+    await axios.post('http://localhost:3001/tasks', {
+      work,
+    });
+  } catch (error) {
+    throw new Error('error for inserted values');
+  }
+}
