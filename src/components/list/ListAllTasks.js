@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import getAllTasks from '../../services/tasksServices';
+import { getAllTasks } from '../../services/tasksServices';
 
 function ListAllTasks() {
   const [allTasks, setAllTasks] = useState([]);
@@ -26,6 +26,13 @@ function ListAllTasks() {
             <div key={id}>
               <li>{work}</li>
               <span>{status}</span>
+              {/* <button
+                type="button"
+                value={id}
+                // onClick={(e) => checkValue(e)}
+              >
+                remover
+              </button> */}
             </div>
           ))
         }
