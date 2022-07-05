@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { insetTask } from '../../../services/tasksServices';
+import { insertTask } from '../../../services/tasksServices';
 
 export default function AddNewTask() {
   const [task, setTask] = useState('');
@@ -9,7 +9,7 @@ export default function AddNewTask() {
   };
 
   async function addTask(newTask) {
-    await insetTask(newTask);
+    await insertTask(newTask);
     setTask('');
   }
 

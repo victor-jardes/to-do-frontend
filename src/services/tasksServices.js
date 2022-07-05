@@ -9,7 +9,7 @@ export async function getAllTasks() {
   }
 }
 
-export async function insetTask(work) {
+export async function insertTask(work) {
   try {
     await axios.post('http://localhost:3001/tasks', {
       work,
