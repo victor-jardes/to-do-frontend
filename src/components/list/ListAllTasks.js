@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getAllTasks } from '../../services/tasksServices';
+import { getAllTasks, removeTask } from '../../services/tasksServices';
 
 function ListAllTasks() {
   const [allTasks, setAllTasks] = useState([]);
@@ -18,6 +18,10 @@ function ListAllTasks() {
     findAllTasks();
   }, []);
 
+  const handleRemoveTask = async (id) => {
+    await removeTask(id);
+  };
+
   return (
     <div>
       <ul>
@@ -26,13 +30,13 @@ function ListAllTasks() {
             <div key={id}>
               <li>{work}</li>
               <span>{status}</span>
-              {/* <button
+              <button
                 type="button"
                 value={id}
-                // onClick={(e) => checkValue(e)}
+                onClick={(e) => handleRemoveTask(e.target.value)}
               >
-                remover
-              </button> */}
+                remove
+              </button>
             </div>
           ))
         }
