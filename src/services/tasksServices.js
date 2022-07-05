@@ -18,3 +18,11 @@ export async function insetTask(work) {
     throw new Error('error for inserted values');
   }
 }
+
+export async function removeTask(id) {
+  try {
+    await axios.delete(`http://localhost:3001/tasks/${id}`);
+  } catch (error) {
+    throw new Error('error for inserted values');
+  }
+}
